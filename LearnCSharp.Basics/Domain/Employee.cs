@@ -1,4 +1,6 @@
-﻿namespace LearnCSharp.Basics.Domain
+﻿using System;
+
+namespace LearnCSharp.Basics.Domain
 {
     public class Employee : IEmployee
     {
@@ -22,6 +24,17 @@
         public virtual string PerformDuties()
         {
             throw new System.NotImplementedException();
+        }
+
+        public Employee Clone()
+        {
+            var result = (Employee) MemberwiseClone();
+            return result;
+        }
+        
+        ~Employee()
+        {
+            Console.WriteLine("Clean Up");
         }
     }
 }
