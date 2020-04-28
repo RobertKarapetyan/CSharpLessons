@@ -1,4 +1,4 @@
-﻿namespace LearnCSharp.Basics
+﻿namespace LearnCSharp.Basics.Domain
 {
     struct EmployeeData
     {

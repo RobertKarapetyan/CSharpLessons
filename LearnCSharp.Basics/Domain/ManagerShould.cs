@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LearnCSharp.Basics
+namespace LearnCSharp.Basics.Domain
 {
     [TestClass]
     public class ManagerShould
@@ -35,8 +35,8 @@ namespace LearnCSharp.Basics
             }
             
             Assert.AreEqual("System.Object", current.ToString());
-            Assert.AreEqual("LearnCSharp.Basics.Employee", objectTypes[1].ToString());
-            Assert.AreEqual("LearnCSharp.Basics.Manager", objectTypes[0].ToString());
+            Assert.AreEqual("LearnCSharp.Basics.Domain.Employee", objectTypes[1].ToString());
+            Assert.AreEqual("LearnCSharp.Basics.Domain.Manager", objectTypes[0].ToString());
             
             Assert.AreEqual("System.RuntimeType", current.GetType().ToString());
             Assert.AreEqual("System.RuntimeType", objectTypes[1].GetType().ToString());
