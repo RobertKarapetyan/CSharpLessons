@@ -55,5 +55,25 @@ namespace LearnCSharp.Basics.Domain
             otherEmployee.Id++;
             Assert.AreNotEqual(_employee.Id, otherEmployee.Id);
         }
+
+        [TestMethod]
+        public void ShouldCastExplicitly()
+        {
+            var exception = new Exception();
+            
+            try
+            {
+                var manager = (Manager) _employee;
+            }
+            catch (Exception e)
+            {
+                exception = e;
+            }
+            finally
+            {
+                Assert.AreEqual(typeof(InvalidCastException), exception.GetType());
+            }
+            
+        }
     }
 }
